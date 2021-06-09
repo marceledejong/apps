@@ -1,0 +1,2375 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.1",
+    "title": "WindChill",
+    "x-lastModified": "08 June 2021 2:46:44 pm (Central European Summer Time)"
+  },
+  "paths": {
+    "/v4/ProdMgmt/Parts": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/GetPart"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v4/ProdMgmt/$metadata#Parts",
+                "value": [
+                  {
+                    "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                    "CreatedOn": "2014-12-12T01:00:00+01:00",
+                    "ID": "OR:wt.part.WTPart:244091886",
+                    "LastModified": "2021-05-18T08:29:21+02:00",
+                    "AlternateNumber": null,
+                    "AssemblyMode": {
+                      "Value": "separable",
+                      "Display": "Separable"
+                    },
+                    "BOMType": null,
+                    "CabinetName": "Scribe Admin",
+                    "ChangeStatus": null,
+                    "CheckOutStatus": "cat-working-copy",
+                    "CheckoutState": "Working copy, checked-out to you",
+                    "Comments": "",
+                    "ConfigurableModule": {
+                      "Value": "standard",
+                      "Display": "No"
+                    },
+                    "CreatedBy": "Coenraadts",
+                    "DefaultTraceCode": {
+                      "Value": "0",
+                      "Display": "Untraced"
+                    },
+                    "DefaultUnit": {
+                      "Value": "ea",
+                      "Display": "each"
+                    },
+                    "EndItem": false,
+                    "FolderLocation": "/Moba Zaandam/CAD Documents and Parts",
+                    "FolderName": "Checked Out",
+                    "GatheringPart": false,
+                    "GeneralStatus": {
+                      "Path": "http://nlbs175pwc02.moba-bv.local/Windchill/com/ptc/core/htmlcomp/images/checkedout_byyou9x9.gif",
+                      "Tooltip": "Working copy, checked-out to you"
+                    },
+                    "Identity": "Mechanical Article - 66150010, Washer, 0.5 (Design)",
+                    "Latest": true,
+                    "LifeCycleTemplateName": "MOBA Part Life Cycle",
+                    "ModifiedBy": "Scribe Admin",
+                    "Name": "Washer",
+                    "Number": "66150010",
+                    "ObjectType": "Mechanical Article",
+                    "OrganizationReference": "{\"type\":\"text\"}",
+                    "PhantomManufacturingPart": false,
+                    "Revision": "0",
+                    "ShareStatus": null,
+                    "Source": {
+                      "Value": "make",
+                      "Display": "Make"
+                    },
+                    "State": {
+                      "Value": "RELEASED",
+                      "Display": "Released"
+                    },
+                    "Supersedes": null,
+                    "TypeIcon": {
+                      "Path": "http://nlbs175pwc02.moba-bv.local/Windchill/wtcore/images/part.gif",
+                      "Tooltip": "Mechanical Article"
+                    },
+                    "Version": "0.5 (Design)",
+                    "VersionID": "VR:wt.part.WTPart:244091885",
+                    "View": "Design",
+                    "APPLICABILITYCHECK": null,
+                    "APPLICABILITYSTATUS": null,
+                    "APPLICABILITYSTATUSGRAPHICAL": null,
+                    "ARTICLECODE": {
+                      "Value": "Z99",
+                      "Display": "Purchased part Z99"
+                    },
+                    "CREATESTEP": null,
+                    "CUSTOMER": null,
+                    "CUSTOMERNUMBER": null,
+                    "ERPBEW": "1,4",
+                    "ERPBEWWRS": null,
+                    "ERPCOST": null,
+                    "ERPCUMA": "1,5",
+                    "ERPMAT": "1,3",
+                    "ERPMNO": "",
+                    "ERPVOOR": "175",
+                    "ERPWEAR": "",
+                    "EXCLUDEFROMCATALOG": false,
+                    "EXPECTEDASSEMBLYTIME": null,
+                    "EXPECTEDCOSTPRICE": null,
+                    "LEGACYCHANGENOTE": null,
+                    "LNSPARE": "",
+                    "MNO": null,
+                    "PROJECTNUMBER": null,
+                    "SPARE": null,
+                    "WEAR": null,
+                    "AIRCONSUMPTION": null,
+                    "COENRAADTSNUMBER": "BA35A1-20X24",
+                    "COLOR": null,
+                    "CONFIGURATION": null,
+                    "COUNTRY": null,
+                    "CUSTOMERNAME": null,
+                    "DESCRIPTIONCAD": null,
+                    "FINISH": null,
+                    "LOCATION": null,
+                    "MACHINETYPE": null,
+                    "MANUALMASS": null,
+                    "MATERIAL": null,
+                    "MATERIALCATEGORY": null,
+                    "MATERIALDESCRIPTION": null,
+                    "MATERIALDESCRIPTIONFREE": null,
+                    "MATERIALTYPE": null,
+                    "MECHANICALCLASSIFICATION": null,
+                    "POWERCONSUMPTION": null,
+                    "REMARKLEGACY": "CSN KAS COENRAADTS IMPORT",
+                    "WATERCONSUMPTION": null
+                  }
+                ],
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV4ProdMgmtParts"
+      }
+    },
+    "/v3/PTC/GetCSRFToken()": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/GetNonce"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v3/PTC/$metadata#PTC.CSRFToken",
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin",
+                "NonceKey": "CSRF_NONCE",
+                "NonceValue": "p0sjRCWGzMWY6F8w8SpQPkj3iJ/Csj5E6iAWfUjMoo3OpiZSyC9JFE7OhbWhgmsIwTJQMkzpq/ii2WkCl3MScxC0+feh3GUA0XIVEXPOhq/0mThIxgxKI0n/ourJ1WI="
+              }
+            }
+          }
+        },
+        "parameters": [],
+        "operationId": "getV3PTCGetCSRFToken()"
+      }
+    },
+    "/v5/ProdMgmt/Parts('{_Id}')/PTC.ProdMgmt.CheckOut": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/GetPartCheckout"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "$metadata#Parts",
+                "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                "CreatedOn": "2014-12-12T01:00:00+01:00",
+                "ID": "OR:wt.part.WTPart:244835402",
+                "LastModified": "2021-06-08T10:56:05+02:00",
+                "AlternateNumber": null,
+                "AssemblyMode": {
+                  "Value": "separable",
+                  "Display": "Separable"
+                },
+                "BOMType": null,
+                "CabinetName": "Scribe Admin",
+                "ChangeStatus": null,
+                "CheckOutStatus": "cat-working-copy",
+                "CheckoutState": "Working copy, checked-out to you",
+                "Comments": "",
+                "ConfigurableModule": {
+                  "Value": "standard",
+                  "Display": "No"
+                },
+                "CreatedBy": "Coenraadts",
+                "DefaultTraceCode": {
+                  "Value": "0",
+                  "Display": "Untraced"
+                },
+                "DefaultUnit": {
+                  "Value": "ea",
+                  "Display": "each"
+                },
+                "EndItem": false,
+                "FolderLocation": "/Moba Zaandam/CAD Documents and Parts",
+                "FolderName": "Checked Out",
+                "GatheringPart": false,
+                "GeneralStatus": {
+                  "Path": "http://nlbs175pwc02.moba-bv.local/Windchill/com/ptc/core/htmlcomp/images/checkedout_byyou9x9.gif",
+                  "Tooltip": "Working copy, checked-out to you"
+                },
+                "Identity": "Mechanical Article - 66150010, Washer, 0.34 (Design)",
+                "Latest": true,
+                "LifeCycleTemplateName": "MOBA Part Life Cycle",
+                "ModifiedBy": "Scribe Admin",
+                "Name": "Washer",
+                "Number": "66150010",
+                "ObjectType": "Mechanical Article",
+                "OrganizationReference": "{\"type\":\"text\"}",
+                "PhantomManufacturingPart": false,
+                "Revision": "0",
+                "ShareStatus": null,
+                "Source": {
+                  "Value": "make",
+                  "Display": "Make"
+                },
+                "State": {
+                  "Value": "RELEASED",
+                  "Display": "Released"
+                },
+                "Supersedes": null,
+                "TypeIcon": {
+                  "Path": "http://nlbs175pwc02.moba-bv.local/Windchill/wtcore/images/part.gif",
+                  "Tooltip": "Mechanical Article"
+                },
+                "Version": "0.34 (Design)",
+                "VersionID": "VR:wt.part.WTPart:244835401",
+                "View": "Design",
+                "APPLICABILITYCHECK": null,
+                "APPLICABILITYSTATUS": null,
+                "APPLICABILITYSTATUSGRAPHICAL": null,
+                "ARTICLECODE": {
+                  "Value": "Z99",
+                  "Display": "Purchased part Z99"
+                },
+                "CREATESTEP": null,
+                "CUSTOMER": null,
+                "CUSTOMERNUMBER": null,
+                "ERPBEW": "20.7",
+                "ERPBEWWRS": null,
+                "ERPCOST": null,
+                "ERPCUMA": "20.1",
+                "ERPMAT": "30.2",
+                "ERPMNO": "Yes",
+                "ERPVOOR": "42.2",
+                "ERPWEAR": "No",
+                "EXCLUDEFROMCATALOG": false,
+                "EXPECTEDASSEMBLYTIME": null,
+                "EXPECTEDCOSTPRICE": null,
+                "LEGACYCHANGENOTE": null,
+                "LNSPARE": "Yes",
+                "MNO": null,
+                "PROJECTNUMBER": null,
+                "SPARE": null,
+                "WEAR": null,
+                "AIRCONSUMPTION": null,
+                "COENRAADTSNUMBER": "BA35A1-20X24",
+                "COLOR": null,
+                "CONFIGURATION": null,
+                "COUNTRY": null,
+                "CUSTOMERNAME": null,
+                "DESCRIPTIONCAD": null,
+                "FINISH": null,
+                "LOCATION": null,
+                "MACHINETYPE": null,
+                "MANUALMASS": null,
+                "MATERIAL": null,
+                "MATERIALCATEGORY": null,
+                "MATERIALDESCRIPTION": null,
+                "MATERIALDESCRIPTIONFREE": null,
+                "MATERIALTYPE": null,
+                "MECHANICALCLASSIFICATION": null,
+                "POWERCONSUMPTION": null,
+                "REMARKLEGACY": "CSN KAS COENRAADTS IMPORT",
+                "WATERCONSUMPTION": null,
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "CSRF_NONCE",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "_Id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CheckOut"
+            }
+          }
+        ],
+        "operationId": "postV5ProdMgmtParts('__id_')PTC.ProdMgmt.CheckOut",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/v5/ProdMgmt/Parts('{_Id}')": {
+      "patch": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/GetPart"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "CSRF_NONCE",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "_Id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PatchPart"
+            }
+          }
+        ],
+        "operationId": "patchV5ProdMgmtParts('__Id_')",
+        "consumes": [
+          "application/json"
+        ]
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/ProdMgmt"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/$metadata#Parts/$entity",
+                "@odata.type": "#PTC.ProdMgmt.ConfigurablePart",
+                "CreatedOn": "2021-03-02T12:29:13+01:00",
+                "ID": "OR:wt.part.WTPart:239045858",
+                "LastModified": "2021-03-02T12:29:13+01:00",
+                "AlternateNumber": null,
+                "AssemblyMode": {
+                  "Value": "separable",
+                  "Display": "Separable"
+                },
+                "BOMType": null,
+                "CabinetName": "Default",
+                "ChangeStatus": null,
+                "CheckOutStatus": "",
+                "CheckoutState": "Checked in",
+                "Comments": null,
+                "ConfigurableModule": {
+                  "Value": "variant",
+                  "Display": "Variant"
+                },
+                "CreatedBy": "Bertus van &#39;t Slot",
+                "DefaultTraceCode": {
+                  "Value": "0",
+                  "Display": "Untraced"
+                },
+                "DefaultUnit": {
+                  "Value": "ea",
+                  "Display": "each"
+                },
+                "EndItem": false,
+                "FolderLocation": "/Forta/CAD Documents and Parts",
+                "FolderName": "CAD Documents and Parts",
+                "GatheringPart": false,
+                "GeneralStatus": null,
+                "Identity": "Configurable Part - 0000000611, INFEED_CONFIG_PRODUCT_TEST-0000000012, 1.1 (Design)",
+                "Latest": true,
+                "LifeCycleTemplateName": "MOBA Part Life Cycle",
+                "ModifiedBy": "Bertus van &#39;t Slot",
+                "Name": "INFEED_CONFIG_PRODUCT_TEST-0000000012",
+                "Number": "0000000611",
+                "ObjectType": "Configurable Part",
+                "OrganizationReference": "{\"type\":\"text\"}",
+                "PhantomManufacturingPart": false,
+                "Revision": "1",
+                "ShareStatus": null,
+                "Source": {
+                  "Value": "make",
+                  "Display": "Make"
+                },
+                "State": {
+                  "Value": "INWORK",
+                  "Display": "In Work"
+                },
+                "Supersedes": null,
+                "TypeIcon": {
+                  "Path": "http://nlbs175pwc02.moba-bv.local/Windchill/wtcore/images/part.gif",
+                  "Tooltip": "Module Variant"
+                },
+                "Version": "1.1 (Design)",
+                "VersionID": "VR:wt.part.WTPart:239045857",
+                "View": "Design",
+                "APPLICABILITYCHECK": 3,
+                "APPLICABILITYSTATUS": {
+                  "Value": "Preferred",
+                  "Display": "Preferred"
+                },
+                "APPLICABILITYSTATUSGRAPHICAL": 2,
+                "ARTICLECODE": null,
+                "CREATESTEP": null,
+                "CUSTOMER": null,
+                "CUSTOMERNUMBER": null,
+                "ERPBEW": null,
+                "ERPBEWWRS": null,
+                "ERPCOST": null,
+                "ERPCUMA": null,
+                "ERPMAT": null,
+                "ERPMNO": null,
+                "ERPVOOR": null,
+                "ERPWEAR": null,
+                "EXCLUDEFROMCATALOG": false,
+                "EXPECTEDASSEMBLYTIME": null,
+                "EXPECTEDCOSTPRICE": null,
+                "LEGACYCHANGENOTE": null,
+                "LNSPARE": null,
+                "MNO": false,
+                "PROJECTNUMBER": null,
+                "SPARE": false,
+                "WEAR": false,
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin",
+                "Uses": [
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045868"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045870"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045872"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045874"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045876"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045878"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045880"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045882"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045884"
+                  },
+                  {
+                    "ID": "OR:wt.part.WTPartUsageLink:239045886"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": "Uses($select=ID)"
+          },
+          {
+            "name": "_Id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV5ProdMgmtParts('__Id_')"
+      }
+    },
+    "/v5/ProdMgmt/Parts('{_Id}')/PTC.ProdMgmt.CheckIn": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/GetPart"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "CSRF_NONCE",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "_Id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CheckIn"
+            }
+          }
+        ],
+        "operationId": "postV5ProdMgmtParts('__Id_')PTC.ProdMgmt.CheckIn",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/v5/ChangeMgmt/ChangeNotices": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/ChangeNotices"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ChangeMgmt/$metadata#ChangeNotices",
+                "value": [
+                  {
+                    "@odata.type": "#PTC.ChangeMgmt.CustomerOrder",
+                    "Category": null,
+                    "CreatedOn": "2021-02-03T17:51:45+01:00",
+                    "Description": null,
+                    "DescriptionSummary": null,
+                    "ID": "OR:wt.change2.WTChangeOrder2:238882233",
+                    "Identity": "Customer Order - CN-00009, A",
+                    "IsRemote": false,
+                    "LastModified": "2021-02-04T10:12:03+01:00",
+                    "Latest": true,
+                    "LifeCycleTemplateName": "Change Notice Life Cycle",
+                    "Location": "/Forta/Windchill Items/Change Items",
+                    "Name": "Customer Order template",
+                    "NeedDate": null,
+                    "Number": "CN-00009",
+                    "ResolutionDate": "2021-02-04T10:12:03+01:00",
+                    "Revision": "A",
+                    "State": {
+                      "Value": "RESOLVED",
+                      "Display": "Resolved"
+                    },
+                    "TypeIcon": {
+                      "Path": "http://nlbs175pwc02.moba-bv.local/Windchill/netmarkets/images/chgnotice.gif",
+                      "Tooltip": "Customer Order"
+                    },
+                    "Uri": null,
+                    "Version": null,
+                    "VersionID": "VR:wt.change2.WTChangeOrder2:238882232",
+                    "CreatedBy": "Organization Administrator",
+                    "ModifiedBy": "Organization Administrator",
+                    "ChangeAdminI": [
+                      {
+                        "DisplayName": "Bertus van 't Slot",
+                        "PrincipalID": "wt.org.WTUser:127277"
+                      },
+                      {
+                        "DisplayName": "Jan Willem de Bil",
+                        "PrincipalID": "wt.org.WTUser:127624"
+                      },
+                      {
+                        "DisplayName": "Sven Schuurman",
+                        "PrincipalID": "wt.org.WTUser:128071"
+                      },
+                      {
+                        "DisplayName": "Tijmen Abrahamsen",
+                        "PrincipalID": "wt.org.WTUser:128098"
+                      }
+                    ],
+                    "ChangeAdminII": [
+                      {
+                        "DisplayName": "Bertus van 't Slot",
+                        "PrincipalID": "wt.org.WTUser:127277"
+                      },
+                      {
+                        "DisplayName": "Jan Willem de Bil",
+                        "PrincipalID": "wt.org.WTUser:127624"
+                      },
+                      {
+                        "DisplayName": "Sven Schuurman",
+                        "PrincipalID": "wt.org.WTUser:128071"
+                      },
+                      {
+                        "DisplayName": "Tijmen Abrahamsen",
+                        "PrincipalID": "wt.org.WTUser:128098"
+                      },
+                      {
+                        "DisplayName": "gpouser",
+                        "PrincipalID": "wt.org.WTUser:112382375"
+                      }
+                    ],
+                    "ChangeNoticeComplexity": {
+                      "Value": "SIMPLE",
+                      "Display": "Fast Track"
+                    },
+                    "ObjectType": "Customer Order",
+                    "TeamTemplateName": "Change Notice Team",
+                    "CUSTOMERNAME": "Egg Selent",
+                    "CUSTOMERNUMBER": "45612",
+                    "ORDERNUMBER": null
+                  },
+                  {
+                    "@odata.type": "#PTC.ChangeMgmt.ECN",
+                    "Category": null,
+                    "CreatedOn": "2021-04-28T09:20:51+02:00",
+                    "Description": null,
+                    "DescriptionSummary": null,
+                    "ID": "OR:wt.change2.WTChangeOrder2:243418652",
+                    "Identity": "ECN - 00030, A",
+                    "IsRemote": false,
+                    "LastModified": "2021-04-28T09:21:30+02:00",
+                    "Latest": true,
+                    "LifeCycleTemplateName": "Change Notice Life Cycle",
+                    "Location": "/Forta",
+                    "Name": "test",
+                    "NeedDate": null,
+                    "Number": "00030",
+                    "ResolutionDate": "2021-04-28T09:21:30+02:00",
+                    "Revision": "A",
+                    "State": {
+                      "Value": "RESOLVED",
+                      "Display": "Resolved"
+                    },
+                    "TypeIcon": {
+                      "Path": "http://nlbs175pwc02.moba-bv.local/Windchill/netmarkets/images/chgnotice.gif",
+                      "Tooltip": "ECN"
+                    },
+                    "Uri": null,
+                    "Version": null,
+                    "VersionID": "VR:wt.change2.WTChangeOrder2:243418651",
+                    "CreatedBy": "Organization Administrator",
+                    "ModifiedBy": "Organization Administrator",
+                    "ChangeAdminI": [
+                      {
+                        "DisplayName": "Bart de Haan",
+                        "PrincipalID": "wt.org.WTUser:190756875"
+                      },
+                      {
+                        "DisplayName": "Bertus van 't Slot",
+                        "PrincipalID": "wt.org.WTUser:127277"
+                      },
+                      {
+                        "DisplayName": "Jan Willem de Bil",
+                        "PrincipalID": "wt.org.WTUser:127624"
+                      },
+                      {
+                        "DisplayName": "Sven Schuurman",
+                        "PrincipalID": "wt.org.WTUser:128071"
+                      },
+                      {
+                        "DisplayName": "Tijmen Abrahamsen",
+                        "PrincipalID": "wt.org.WTUser:128098"
+                      }
+                    ],
+                    "ChangeAdminII": [
+                      {
+                        "DisplayName": "Bart de Haan",
+                        "PrincipalID": "wt.org.WTUser:190756875"
+                      },
+                      {
+                        "DisplayName": "Bertus van 't Slot",
+                        "PrincipalID": "wt.org.WTUser:127277"
+                      },
+                      {
+                        "DisplayName": "Jan Willem de Bil",
+                        "PrincipalID": "wt.org.WTUser:127624"
+                      },
+                      {
+                        "DisplayName": "Ronald Evers",
+                        "PrincipalID": "wt.org.WTUser:128971"
+                      },
+                      {
+                        "DisplayName": "Sven Schuurman",
+                        "PrincipalID": "wt.org.WTUser:128071"
+                      },
+                      {
+                        "DisplayName": "Tijmen Abrahamsen",
+                        "PrincipalID": "wt.org.WTUser:128098"
+                      },
+                      {
+                        "DisplayName": "gpouser",
+                        "PrincipalID": "wt.org.WTUser:112382375"
+                      }
+                    ],
+                    "ChangeNoticeComplexity": {
+                      "Value": "SIMPLE",
+                      "Display": "Fast Track"
+                    },
+                    "ObjectType": "ECN",
+                    "TeamTemplateName": "Change Notice Team"
+                  }
+                ],
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV5ChangeMgmtChangeNotices"
+      }
+    },
+    "/v5/ChangeMgmt/ChangeOrders('{_Id}')/ResultingObjects": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/ChangeMgmt"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ChangeMgmt/$metadata#Changeables(ID,Name,Number,Revision,State/Value)",
+                "value": [
+                  {
+                    "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ChangeMgmt/Changeables('OR:wt.part.WTPart:238881463')",
+                    "ID": "OR:wt.part.WTPart:238881463",
+                    "Name": "Assy Orientator right optie 2",
+                    "Number": "41519520",
+                    "Revision": "1",
+                    "State": {
+                      "Value": "RELEASED"
+                    }
+                  }
+                ],
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": "Name,Number,Revision,State/Value"
+          },
+          {
+            "name": "_Id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV5ChangeMgmtChangeOrders"
+      }
+    },
+    "/v3/NavCriteria/NavigationCriterias": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/NavCriteria"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v3/NavCriteria/$metadata#NavigationCriterias(ID,Name)",
+                "value": [
+                  {
+                    "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v3/NavCriteria/NavigationCriterias('OR:wt.filter.NavigationCriteria:239139578')",
+                    "ID": "OR:wt.filter.NavigationCriteria:239139578",
+                    "Name": "Design - latest"
+                  }
+                ],
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": "Name"
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": "Name eq 'Design - Latest'"
+          }
+        ],
+        "operationId": "getV3NavCriteriaNavigationCriterias"
+      }
+    },
+    "/v5/ProdMgmt/Parts('{_Id}')/PTC.ProdMgmt.GetPartStructure": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/GetPartStructure"
+            },
+            "examples": {
+              "application/json": {
+                "@odata.context": "$metadata#PartStructureItems",
+                "PartId": "OR:wt.part.WTPart:239045858",
+                "PartUseId": null,
+                "PartName": "INFEED_CONFIG_PRODUCT_TEST-0000000012",
+                "PartNumber": "0000000611",
+                "PathId": null,
+                "PVTreeId": "/",
+                "PVParentTreeId": null,
+                "@PTC.AppliedContainerContext.LocalTimeZone": "Europe/Berlin",
+                "Components": [
+                  {
+                    "PartId": "OR:wt.part.WTPart:140462509",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:140462509')",
+                      "ID": "OR:wt.part.WTPart:140462509",
+                      "Latest": true,
+                      "Name": "Forta - Chassis and Components SLoader for main cabinet",
+                      "Number": "41331280",
+                      "Revision": "1",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045870')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045870",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:150330757",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:150330757')",
+                      "ID": "OR:wt.part.WTPart:150330757",
+                      "Latest": true,
+                      "Name": "Assy interface ML",
+                      "Number": "41132450",
+                      "Revision": "1",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045884')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045884",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:214190447",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:214190447')",
+                      "ID": "OR:wt.part.WTPart:214190447",
+                      "Latest": true,
+                      "Name": "Forta - Cables SLoader for Oriëntator",
+                      "Number": "41331700",
+                      "Revision": "2",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045868')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045868",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:242721632",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:242721632')",
+                      "ID": "OR:wt.part.WTPart:242721632",
+                      "Latest": true,
+                      "Name": "Assy Extension crack rolls 1200mm",
+                      "Number": "24505650",
+                      "Revision": "4",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045872')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045872",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:139555284",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:139555284')",
+                      "ID": "OR:wt.part.WTPart:139555284",
+                      "Latest": true,
+                      "Name": "Forta - Cables SLoader for Infeed",
+                      "Number": "41331720",
+                      "Revision": "1",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045878')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045878",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:238832555",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:238832555')",
+                      "ID": "OR:wt.part.WTPart:238832555",
+                      "Latest": true,
+                      "Name": "Forta - Chassis/Components SLoader for Oriëntator",
+                      "Number": "41331290",
+                      "Revision": "2",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045874')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045874",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:243270113",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:243270113')",
+                      "ID": "OR:wt.part.WTPart:243270113",
+                      "Latest": true,
+                      "Name": "50 Assy Orientator L",
+                      "Number": "41450900",
+                      "Revision": "1",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045882')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045882",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:122018423",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:122018423')",
+                      "ID": "OR:wt.part.WTPart:122018423",
+                      "Latest": true,
+                      "Name": "Assy Extension wide rolls 800mm",
+                      "Number": "24504950",
+                      "Revision": "2",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045886')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045886",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:2381131",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:2381131')",
+                      "ID": "OR:wt.part.WTPart:2381131",
+                      "Latest": true,
+                      "Name": "Forta - Cables Crack Rolls extention 800mm",
+                      "Number": "24505720",
+                      "Revision": "1",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045880')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045880",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  },
+                  {
+                    "PartId": "OR:wt.part.WTPart:119380688",
+                    "Part": {
+                      "@odata.type": "#PTC.ProdMgmt.MechanicalArticle",
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:119380688')",
+                      "ID": "OR:wt.part.WTPart:119380688",
+                      "Latest": true,
+                      "Name": "Forta - Cables Wide Rolls extention 800mm",
+                      "Number": "24505750",
+                      "Revision": "1",
+                      "View": "Design"
+                    },
+                    "PartUse": {
+                      "@odata.id": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045876')",
+                      "ID": "OR:wt.part.WTPartUsageLink:239045876",
+                      "Quantity": 1,
+                      "Unit": {
+                        "Value": "ea"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "$expand",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": "Components($select=PartId;$expand=Part($select=Name,Number,Revision,View,Latest),PartUse($select=Quantity,Unit/Value);$levels=1)"
+          },
+          {
+            "name": "CSRF_NONC",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "_Id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GiveNewSchemaNameHere"
+            }
+          }
+        ],
+        "operationId": "postV5ProdMgmtParts('__Id_')PTC.ProdMgmt.GetPartStructure",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "GetPart": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v4/ProdMgmt/$metadata#Parts"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string",
+                "default": "OR:wt.part.WTPart:244091886"
+              }
+            }
+          }
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        }
+      }
+    },
+    "GetNonce": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v3/PTC/$metadata#PTC.CSRFToken"
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        },
+        "NonceKey": {
+          "type": "string",
+          "default": "CSRF_NONCE"
+        },
+        "NonceValue": {
+          "type": "string",
+          "default": "p0sjRCWGzMWY6F8w8SpQPkj3iJ/Csj5E6iAWfUjMoo3OpiZSyC9JFE7OhbWhgmsIwTJQMkzpq/ii2WkCl3MScxC0+feh3GUA0XIVEXPOhq/0mThIxgxKI0n/ourJ1WI="
+        }
+      }
+    },
+    "GiveNewSchemaNameHere": {
+      "type": "object",
+      "properties": {
+        "NavigationCriteria": {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string",
+              "default": "OR:wt.filter.NavigationCriteria:239139578"
+            }
+          }
+        }
+      }
+    },
+    "PatchPart": {
+      "type": "object",
+      "properties": {
+        "ERPMAT": {
+          "type": "string",
+          "default": ""
+        },
+        "ERPBEW": {
+          "type": "string",
+          "default": ""
+        },
+        "ERPWEAR": {
+          "type": "string",
+          "default": ""
+        },
+        "LNSPARE": {
+          "type": "string",
+          "default": ""
+        },
+        "ERPMNO": {
+          "type": "string",
+          "default": ""
+        },
+        "ERPCUMA": {
+          "type": "string",
+          "default": ""
+        },
+        "ERPVOOR": {
+          "type": "string",
+          "default": ""
+        },
+        "@odata.type": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
+    "CheckOut": {},
+    "CheckIn": {},
+    "ChangeNotices": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ChangeMgmt/$metadata#ChangeNotices"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "@odata.type": {
+                "type": "string",
+                "default": "#PTC.ChangeMgmt.ECN"
+              },
+              "Category": {
+                "type": "string"
+              },
+              "CreatedOn": {
+                "type": "string",
+                "format": "date-time",
+                "default": "2021-04-28T09:20:51+02:00"
+              },
+              "Description": {
+                "type": "string"
+              },
+              "DescriptionSummary": {
+                "type": "string"
+              },
+              "ID": {
+                "type": "string",
+                "default": "OR:wt.change2.WTChangeOrder2:243418652"
+              },
+              "Identity": {
+                "type": "string",
+                "default": "ECN - 00030, A"
+              },
+              "IsRemote": {
+                "type": "boolean",
+                "default": false
+              },
+              "LastModified": {
+                "type": "string",
+                "format": "date-time",
+                "default": "2021-04-28T09:21:30+02:00"
+              },
+              "Latest": {
+                "type": "boolean",
+                "default": true
+              },
+              "LifeCycleTemplateName": {
+                "type": "string",
+                "default": "Change Notice Life Cycle"
+              },
+              "Location": {
+                "type": "string",
+                "default": "/Forta"
+              },
+              "Name": {
+                "type": "string",
+                "default": "test"
+              },
+              "NeedDate": {
+                "type": "string"
+              },
+              "Number": {
+                "type": "string",
+                "default": "00030"
+              },
+              "ResolutionDate": {
+                "type": "string",
+                "format": "date-time",
+                "default": "2021-04-28T09:21:30+02:00"
+              },
+              "Revision": {
+                "type": "string",
+                "default": "A"
+              },
+              "State": {
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "type": "string",
+                    "default": "RESOLVED"
+                  },
+                  "Display": {
+                    "type": "string",
+                    "default": "Resolved"
+                  }
+                }
+              },
+              "TypeIcon": {
+                "type": "object",
+                "properties": {
+                  "Path": {
+                    "type": "string",
+                    "default": "http://nlbs175pwc02.moba-bv.local/Windchill/netmarkets/images/chgnotice.gif"
+                  },
+                  "Tooltip": {
+                    "type": "string",
+                    "default": "ECN"
+                  }
+                }
+              },
+              "Uri": {
+                "type": "string"
+              },
+              "Version": {
+                "type": "string"
+              },
+              "VersionID": {
+                "type": "string",
+                "default": "VR:wt.change2.WTChangeOrder2:243418651"
+              },
+              "CreatedBy": {
+                "type": "string",
+                "default": "Organization Administrator"
+              },
+              "ModifiedBy": {
+                "type": "string",
+                "default": "Organization Administrator"
+              },
+              "ChangeAdminI": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "DisplayName": {
+                      "type": "string",
+                      "default": "Tijmen Abrahamsen"
+                    },
+                    "PrincipalID": {
+                      "type": "string",
+                      "default": "wt.org.WTUser:128098"
+                    }
+                  }
+                }
+              },
+              "ChangeAdminII": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "DisplayName": {
+                      "type": "string",
+                      "default": "gpouser"
+                    },
+                    "PrincipalID": {
+                      "type": "string",
+                      "default": "wt.org.WTUser:112382375"
+                    }
+                  }
+                }
+              },
+              "ChangeNoticeComplexity": {
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "type": "string",
+                    "default": "SIMPLE"
+                  },
+                  "Display": {
+                    "type": "string",
+                    "default": "Fast Track"
+                  }
+                }
+              },
+              "ObjectType": {
+                "type": "string",
+                "default": "ECN"
+              },
+              "TeamTemplateName": {
+                "type": "string",
+                "default": "Change Notice Team"
+              }
+            }
+          }
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        }
+      }
+    },
+    "ChangeMgmt": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ChangeMgmt/$metadata#Changeables(ID,Name,Number,Revision,State/Value)"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "@odata.id": {
+                "type": "string",
+                "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ChangeMgmt/Changeables('OR:wt.part.WTPart:238881463')"
+              },
+              "ID": {
+                "type": "string",
+                "default": "OR:wt.part.WTPart:238881463"
+              },
+              "Name": {
+                "type": "string",
+                "default": "Assy Orientator right optie 2"
+              },
+              "Number": {
+                "type": "string",
+                "default": "41519520"
+              },
+              "Revision": {
+                "type": "string",
+                "default": "1"
+              },
+              "State": {
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "type": "string",
+                    "default": "RELEASED"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        }
+      }
+    },
+    "ProdMgmt": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/$metadata#Parts/$entity"
+        },
+        "@odata.type": {
+          "type": "string",
+          "default": "#PTC.ProdMgmt.ConfigurablePart"
+        },
+        "CreatedOn": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2021-03-02T12:29:13+01:00"
+        },
+        "ID": {
+          "type": "string",
+          "default": "OR:wt.part.WTPart:239045858"
+        },
+        "LastModified": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2021-03-02T12:29:13+01:00"
+        },
+        "AlternateNumber": {
+          "type": "string"
+        },
+        "AssemblyMode": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "separable"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Separable"
+            }
+          }
+        },
+        "BOMType": {
+          "type": "string"
+        },
+        "CabinetName": {
+          "type": "string",
+          "default": "Default"
+        },
+        "ChangeStatus": {
+          "type": "string"
+        },
+        "CheckOutStatus": {
+          "type": "string",
+          "default": ""
+        },
+        "CheckoutState": {
+          "type": "string",
+          "default": "Checked in"
+        },
+        "Comments": {
+          "type": "string"
+        },
+        "ConfigurableModule": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "variant"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Variant"
+            }
+          }
+        },
+        "CreatedBy": {
+          "type": "string",
+          "default": "Bertus van &#39;t Slot"
+        },
+        "DefaultTraceCode": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "0"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Untraced"
+            }
+          }
+        },
+        "DefaultUnit": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "ea"
+            },
+            "Display": {
+              "type": "string",
+              "default": "each"
+            }
+          }
+        },
+        "EndItem": {
+          "type": "boolean",
+          "default": false
+        },
+        "FolderLocation": {
+          "type": "string",
+          "default": "/Forta/CAD Documents and Parts"
+        },
+        "FolderName": {
+          "type": "string",
+          "default": "CAD Documents and Parts"
+        },
+        "GatheringPart": {
+          "type": "boolean",
+          "default": false
+        },
+        "GeneralStatus": {
+          "type": "string"
+        },
+        "Identity": {
+          "type": "string",
+          "default": "Configurable Part - 0000000611, INFEED_CONFIG_PRODUCT_TEST-0000000012, 1.1 (Design)"
+        },
+        "Latest": {
+          "type": "boolean",
+          "default": true
+        },
+        "LifeCycleTemplateName": {
+          "type": "string",
+          "default": "MOBA Part Life Cycle"
+        },
+        "ModifiedBy": {
+          "type": "string",
+          "default": "Bertus van &#39;t Slot"
+        },
+        "Name": {
+          "type": "string",
+          "default": "INFEED_CONFIG_PRODUCT_TEST-0000000012"
+        },
+        "Number": {
+          "type": "string",
+          "default": "0000000611"
+        },
+        "ObjectType": {
+          "type": "string",
+          "default": "Configurable Part"
+        },
+        "OrganizationReference": {
+          "type": "string",
+          "default": "{\"type\":\"text\"}"
+        },
+        "PhantomManufacturingPart": {
+          "type": "boolean",
+          "default": false
+        },
+        "Revision": {
+          "type": "string",
+          "default": "1"
+        },
+        "ShareStatus": {
+          "type": "string"
+        },
+        "Source": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "make"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Make"
+            }
+          }
+        },
+        "State": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "INWORK"
+            },
+            "Display": {
+              "type": "string",
+              "default": "In Work"
+            }
+          }
+        },
+        "Supersedes": {
+          "type": "string"
+        },
+        "TypeIcon": {
+          "type": "object",
+          "properties": {
+            "Path": {
+              "type": "string",
+              "default": "http://nlbs175pwc02.moba-bv.local/Windchill/wtcore/images/part.gif"
+            },
+            "Tooltip": {
+              "type": "string",
+              "default": "Module Variant"
+            }
+          }
+        },
+        "Version": {
+          "type": "string",
+          "default": "1.1 (Design)"
+        },
+        "VersionID": {
+          "type": "string",
+          "default": "VR:wt.part.WTPart:239045857"
+        },
+        "View": {
+          "type": "string",
+          "default": "Design"
+        },
+        "APPLICABILITYCHECK": {
+          "type": "integer",
+          "default": 3
+        },
+        "APPLICABILITYSTATUS": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "Preferred"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Preferred"
+            }
+          }
+        },
+        "APPLICABILITYSTATUSGRAPHICAL": {
+          "type": "integer",
+          "default": 2
+        },
+        "ARTICLECODE": {
+          "type": "string"
+        },
+        "CREATESTEP": {
+          "type": "string"
+        },
+        "CUSTOMER": {
+          "type": "string"
+        },
+        "CUSTOMERNUMBER": {
+          "type": "string"
+        },
+        "ERPBEW": {
+          "type": "string"
+        },
+        "ERPBEWWRS": {
+          "type": "string"
+        },
+        "ERPCOST": {
+          "type": "string"
+        },
+        "ERPCUMA": {
+          "type": "string"
+        },
+        "ERPMAT": {
+          "type": "string"
+        },
+        "ERPMNO": {
+          "type": "string"
+        },
+        "ERPVOOR": {
+          "type": "string"
+        },
+        "ERPWEAR": {
+          "type": "string"
+        },
+        "EXCLUDEFROMCATALOG": {
+          "type": "boolean",
+          "default": false
+        },
+        "EXPECTEDASSEMBLYTIME": {
+          "type": "string"
+        },
+        "EXPECTEDCOSTPRICE": {
+          "type": "string"
+        },
+        "LEGACYCHANGENOTE": {
+          "type": "string"
+        },
+        "LNSPARE": {
+          "type": "string"
+        },
+        "MNO": {
+          "type": "boolean",
+          "default": false
+        },
+        "PROJECTNUMBER": {
+          "type": "string"
+        },
+        "SPARE": {
+          "type": "boolean",
+          "default": false
+        },
+        "WEAR": {
+          "type": "boolean",
+          "default": false
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        },
+        "Uses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ID": {
+                "type": "string",
+                "default": "OR:wt.part.WTPartUsageLink:239045886"
+              }
+            }
+          }
+        }
+      }
+    },
+    "NavCriteria": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v3/NavCriteria/$metadata#NavigationCriterias(ID,Name)"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "@odata.id": {
+                "type": "string",
+                "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v3/NavCriteria/NavigationCriterias('OR:wt.filter.NavigationCriteria:239139578')"
+              },
+              "ID": {
+                "type": "string",
+                "default": "OR:wt.filter.NavigationCriteria:239139578"
+              },
+              "Name": {
+                "type": "string",
+                "default": "Design - latest"
+              }
+            }
+          }
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        }
+      }
+    },
+    "GetPartCheckout": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "$metadata#Parts"
+        },
+        "@odata.type": {
+          "type": "string",
+          "default": "#PTC.ProdMgmt.MechanicalArticle"
+        },
+        "CreatedOn": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2014-12-12T01:00:00+01:00"
+        },
+        "ID": {
+          "type": "string",
+          "default": "OR:wt.part.WTPart:244835402"
+        },
+        "LastModified": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2021-06-08T10:56:05+02:00"
+        },
+        "AlternateNumber": {
+          "type": "string"
+        },
+        "AssemblyMode": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "separable"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Separable"
+            }
+          }
+        },
+        "BOMType": {
+          "type": "string"
+        },
+        "CabinetName": {
+          "type": "string",
+          "default": "Scribe Admin"
+        },
+        "ChangeStatus": {
+          "type": "string"
+        },
+        "CheckOutStatus": {
+          "type": "string",
+          "default": "cat-working-copy"
+        },
+        "CheckoutState": {
+          "type": "string",
+          "default": "Working copy, checked-out to you"
+        },
+        "Comments": {
+          "type": "string",
+          "default": ""
+        },
+        "ConfigurableModule": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "standard"
+            },
+            "Display": {
+              "type": "string",
+              "default": "No"
+            }
+          }
+        },
+        "CreatedBy": {
+          "type": "string",
+          "default": "Coenraadts"
+        },
+        "DefaultTraceCode": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "0"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Untraced"
+            }
+          }
+        },
+        "DefaultUnit": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "ea"
+            },
+            "Display": {
+              "type": "string",
+              "default": "each"
+            }
+          }
+        },
+        "EndItem": {
+          "type": "boolean",
+          "default": false
+        },
+        "FolderLocation": {
+          "type": "string",
+          "default": "/Moba Zaandam/CAD Documents and Parts"
+        },
+        "FolderName": {
+          "type": "string",
+          "default": "Checked Out"
+        },
+        "GatheringPart": {
+          "type": "boolean",
+          "default": false
+        },
+        "GeneralStatus": {
+          "type": "object",
+          "properties": {
+            "Path": {
+              "type": "string",
+              "default": "http://nlbs175pwc02.moba-bv.local/Windchill/com/ptc/core/htmlcomp/images/checkedout_byyou9x9.gif"
+            },
+            "Tooltip": {
+              "type": "string",
+              "default": "Working copy, checked-out to you"
+            }
+          }
+        },
+        "Identity": {
+          "type": "string",
+          "default": "Mechanical Article - 66150010, Washer, 0.34 (Design)"
+        },
+        "Latest": {
+          "type": "boolean",
+          "default": true
+        },
+        "LifeCycleTemplateName": {
+          "type": "string",
+          "default": "MOBA Part Life Cycle"
+        },
+        "ModifiedBy": {
+          "type": "string",
+          "default": "Scribe Admin"
+        },
+        "Name": {
+          "type": "string",
+          "default": "Washer"
+        },
+        "Number": {
+          "type": "string",
+          "default": "66150010"
+        },
+        "ObjectType": {
+          "type": "string",
+          "default": "Mechanical Article"
+        },
+        "OrganizationReference": {
+          "type": "string",
+          "default": "{\"type\":\"text\"}"
+        },
+        "PhantomManufacturingPart": {
+          "type": "boolean",
+          "default": false
+        },
+        "Revision": {
+          "type": "string",
+          "default": "0"
+        },
+        "ShareStatus": {
+          "type": "string"
+        },
+        "Source": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "make"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Make"
+            }
+          }
+        },
+        "State": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "RELEASED"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Released"
+            }
+          }
+        },
+        "Supersedes": {
+          "type": "string"
+        },
+        "TypeIcon": {
+          "type": "object",
+          "properties": {
+            "Path": {
+              "type": "string",
+              "default": "http://nlbs175pwc02.moba-bv.local/Windchill/wtcore/images/part.gif"
+            },
+            "Tooltip": {
+              "type": "string",
+              "default": "Mechanical Article"
+            }
+          }
+        },
+        "Version": {
+          "type": "string",
+          "default": "0.34 (Design)"
+        },
+        "VersionID": {
+          "type": "string",
+          "default": "VR:wt.part.WTPart:244835401"
+        },
+        "View": {
+          "type": "string",
+          "default": "Design"
+        },
+        "APPLICABILITYCHECK": {
+          "type": "string"
+        },
+        "APPLICABILITYSTATUS": {
+          "type": "string"
+        },
+        "APPLICABILITYSTATUSGRAPHICAL": {
+          "type": "string"
+        },
+        "ARTICLECODE": {
+          "type": "object",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "default": "Z99"
+            },
+            "Display": {
+              "type": "string",
+              "default": "Purchased part Z99"
+            }
+          }
+        },
+        "CREATESTEP": {
+          "type": "string"
+        },
+        "CUSTOMER": {
+          "type": "string"
+        },
+        "CUSTOMERNUMBER": {
+          "type": "string"
+        },
+        "ERPBEW": {
+          "type": "string",
+          "default": "20.7"
+        },
+        "ERPBEWWRS": {
+          "type": "string"
+        },
+        "ERPCOST": {
+          "type": "string"
+        },
+        "ERPCUMA": {
+          "type": "string",
+          "default": "20.1"
+        },
+        "ERPMAT": {
+          "type": "string",
+          "default": "30.2"
+        },
+        "ERPMNO": {
+          "type": "string",
+          "default": "Yes"
+        },
+        "ERPVOOR": {
+          "type": "string",
+          "default": "42.2"
+        },
+        "ERPWEAR": {
+          "type": "string",
+          "default": "No"
+        },
+        "EXCLUDEFROMCATALOG": {
+          "type": "boolean",
+          "default": false
+        },
+        "EXPECTEDASSEMBLYTIME": {
+          "type": "string"
+        },
+        "EXPECTEDCOSTPRICE": {
+          "type": "string"
+        },
+        "LEGACYCHANGENOTE": {
+          "type": "string"
+        },
+        "LNSPARE": {
+          "type": "string",
+          "default": "Yes"
+        },
+        "MNO": {
+          "type": "string"
+        },
+        "PROJECTNUMBER": {
+          "type": "string"
+        },
+        "SPARE": {
+          "type": "string"
+        },
+        "WEAR": {
+          "type": "string"
+        },
+        "AIRCONSUMPTION": {
+          "type": "string"
+        },
+        "COENRAADTSNUMBER": {
+          "type": "string",
+          "default": "BA35A1-20X24"
+        },
+        "COLOR": {
+          "type": "string"
+        },
+        "CONFIGURATION": {
+          "type": "string"
+        },
+        "COUNTRY": {
+          "type": "string"
+        },
+        "CUSTOMERNAME": {
+          "type": "string"
+        },
+        "DESCRIPTIONCAD": {
+          "type": "string"
+        },
+        "FINISH": {
+          "type": "string"
+        },
+        "LOCATION": {
+          "type": "string"
+        },
+        "MACHINETYPE": {
+          "type": "string"
+        },
+        "MANUALMASS": {
+          "type": "string"
+        },
+        "MATERIAL": {
+          "type": "string"
+        },
+        "MATERIALCATEGORY": {
+          "type": "string"
+        },
+        "MATERIALDESCRIPTION": {
+          "type": "string"
+        },
+        "MATERIALDESCRIPTIONFREE": {
+          "type": "string"
+        },
+        "MATERIALTYPE": {
+          "type": "string"
+        },
+        "MECHANICALCLASSIFICATION": {
+          "type": "string"
+        },
+        "POWERCONSUMPTION": {
+          "type": "string"
+        },
+        "REMARKLEGACY": {
+          "type": "string",
+          "default": "CSN KAS COENRAADTS IMPORT"
+        },
+        "WATERCONSUMPTION": {
+          "type": "string"
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        }
+      }
+    },
+    "GetPartStructure": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string",
+          "default": "$metadata#PartStructureItems"
+        },
+        "PartId": {
+          "type": "string",
+          "default": "OR:wt.part.WTPart:239045858"
+        },
+        "PartUseId": {
+          "type": "string"
+        },
+        "PartName": {
+          "type": "string",
+          "default": "INFEED_CONFIG_PRODUCT_TEST-0000000012"
+        },
+        "PartNumber": {
+          "type": "string",
+          "default": "0000000611"
+        },
+        "PathId": {
+          "type": "string"
+        },
+        "PVTreeId": {
+          "type": "string",
+          "default": "/"
+        },
+        "PVParentTreeId": {
+          "type": "string"
+        },
+        "@PTC.AppliedContainerContext.LocalTimeZone": {
+          "type": "string",
+          "default": "Europe/Berlin"
+        },
+        "Components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "PartId": {
+                "type": "string",
+                "default": "OR:wt.part.WTPart:119380688"
+              },
+              "Part": {
+                "type": "object",
+                "properties": {
+                  "@odata.type": {
+                    "type": "string",
+                    "default": "#PTC.ProdMgmt.MechanicalArticle"
+                  },
+                  "@odata.id": {
+                    "type": "string",
+                    "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR:wt.part.WTPart:119380688')"
+                  },
+                  "ID": {
+                    "type": "string",
+                    "default": "OR:wt.part.WTPart:119380688"
+                  },
+                  "Latest": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "Name": {
+                    "type": "string",
+                    "default": "Forta - Cables Wide Rolls extention 800mm"
+                  },
+                  "Number": {
+                    "type": "string",
+                    "default": "24505750"
+                  },
+                  "Revision": {
+                    "type": "string",
+                    "default": "1"
+                  },
+                  "View": {
+                    "type": "string",
+                    "default": "Design"
+                  }
+                }
+              },
+              "PartUse": {
+                "type": "object",
+                "properties": {
+                  "@odata.id": {
+                    "type": "string",
+                    "default": "http://nlbs175pwc02.moba-bv.local/Windchill/servlet/odata/v5/ProdMgmt/Parts('OR%3Awt.part.WTPart%3A239045858')/Uses('OR%3Awt.part.WTPartUsageLink%3A239045876')"
+                  },
+                  "ID": {
+                    "type": "string",
+                    "default": "OR:wt.part.WTPartUsageLink:239045876"
+                  },
+                  "Quantity": {
+                    "type": "integer",
+                    "default": 1
+                  },
+                  "Unit": {
+                    "type": "object",
+                    "properties": {
+                      "Value": {
+                        "type": "string",
+                        "default": "ea"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
